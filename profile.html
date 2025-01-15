@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+    <!-- Хедер -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.jpg" alt="Логотип" class="logo-img"></a>
+        </div>
+        <nav>
+            <div class="icons">
+            <a href="cart.html"><img src="images/corb.jpg" alt="Корзина"></a>
+            <a href="index.html"><img src="images/catalog.png" alt="Каталог"></a>
+        </div>
+        </nav>
+    </header>
+
+    <!-- Уведомления -->
+    <div id="notifications" class="notifications">
+       
+    </div>
+
+    <!-- Основной контент -->
+    <main>
+        <h1>Личный кабинет</h1>
+
+        <section class="orders">
+            <h2>Заказы</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Номер заказа</th>
+                        <th>Дата оформления</th>
+                        <th>Товары</th>
+                        <th>Итоговая стоимость</th>
+                        <th>Дата и время доставки</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <p>Компания "First Fit</p>
+        <p>Контакты: info@shop.ru</p>
+    </footer>
+
+    <!-- Модальное окно для просмотра заказа -->
+    <div id="view-order-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-view-modal" class="close">&times;</span>
+            <h2>Просмотр заказа</h2>
+            <p><strong>Товары:</strong> <span id="view-items"></span></p>
+            <p><strong>Итоговая стоимость:</strong> <span id="view-total-price"></span></p>
+            <p><strong>Дата доставки:</strong> <span id="view-delivery-date"></span></p>
+            <p><strong>Время доставки:</strong> <span id="view-delivery-time"></span></p>
+            <p><strong>Дата оформления заказа:</strong> <span id="view-order-date"></span></p>
+        </div>
+    </div>
+
+    <!-- Модальное окно для редактирования заказа -->
+    <div id="edit-order-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-edit-modal" class="close">&times;</span>
+            <h2>Редактировать заказ</h2>
+            <p><strong>Товары:</strong> <input type="text" id="edit-items" /></p>
+            <p><strong>Дата доставки:</strong> <input type="date" id="edit-delivery-date" /></p>
+            <p><strong>Время доставки:</strong> <input type="time" id="edit-delivery-time" /></p>
+            <button id="save-order-changes">Сохранить изменения</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для подтверждения удаления -->
+    <div id="delete-confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-delete-modal">&times;</span>
+            <h2>Вы уверены, что хотите удалить этот заказ?</h2>
+            <button id="confirm-delete">Подтвердить</button>
+            <button id="cancel-delete">Отменить</button>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>
+

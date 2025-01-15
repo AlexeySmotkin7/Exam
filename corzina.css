@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+header .icons a img {
+    width: 45px;
+    margin-left: 15px;
+}
+.logo-img {
+    width: 50px; 
+    height: auto;}
+
+/* Стиль для контейнера корзины */
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 20px;  /* Расстояние между карточками */
+    justify-content: flex-start;  /* Выравнивание карточек по левому краю */
+}
+
+/* Стиль для карточек товаров */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.remove-from-cart-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.remove-from-cart-btn:hover {
+    background-color: #d32f2f;
+}
+.empty-cart-message {
+    display: none;
+}
+.order-form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.total {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+
+    .order-form {
+        max-width: 80%;
+    }
+
+    .buttons button {
+        padding: 8px 16px;
+    }
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+
+    .order-form {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .icons {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .order-form {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}

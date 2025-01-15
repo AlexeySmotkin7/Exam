@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="corzina.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="images/logo.jpg" alt="Логотип" class="logo-img"></a>
+    </div>
+    <div class="icons">
+        <a href="index.html"><img src="images/catalog.png" alt="Корзина"></a>
+        <a href="profile.html"><img src="images/cab.png" alt="Личный кабинет"></a>
+    </div>
+</header>
+<section class="cart-section">
+    <h2>Корзина</h2>
+    <div class="cart-items">
+    <div class="empty-cart-message">
+        <p>Корзина пуста. Перейдите в каталог, чтобы добавить товары.</p>
+    </div>
+</section>
+<div class="order-form">
+    <h2>Оформление заказа</h2>
+    <form id="order-form">
+        <!-- Form Fields -->
+        <div class="form-row">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-row">
+            <label for="phone">Телефон:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        <div class="form-row checkbox">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Согласие на получение рассылки</label>
+        </div>
+        <div class="form-row">
+            <label for="address">Адрес доставки:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div class="form-row">
+            <label for="delivery-date">Дата доставки:</label>
+            <input type="date" id="delivery-date" name="delivery-date" required>
+        </div>
+        <div class="form-row">
+            <label for="time-slot">Временной интервал доставки:</label>
+            <select id="time-slot" name="time-slot" required>
+                <option value="9-12">9:00-12:00</option>
+                <option value="12-15">12:00-15:00</option>
+                <option value="15-18">15:00-18:00</option>
+                <option value="18-00">18:00-00:00</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="comment">Комментарий к заказу:</label>
+            <textarea id="comment" name="comment"></textarea>
+        </div>
+
+        
+        <div class="total">
+            <p>Итоговая стоимость: <span id="total-price">0₽</span></p>
+            <p>Стоимость доставки: <span id="delivery-cost">200₽</span></p> <!-- Это будет отображать стоимость доставки -->
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="submit">Отправить заказ</button>
+            <button type="reset">Сбросить</button>
+        </div>
+    </form>
+</div>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Компания «First fit»</p>
+        <p>Контактные данные: 8 (800) 555-35-35 | info@shop.ru</p>
+    </div>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.jpg" alt="Логотип" class="logo-img"></a>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search" placeholder="Поиск...">
+            <button class="search-btn">Найти</button>
+        </div>
+        <div class="icons">
+            <a href="cart.html"><img src="images/corb.jpg" alt="Корзина"></a>
+            <a href="profile.html"><img src="images/cab.png" alt="Личный кабинет"></a>
+        </div>
+    </header>
+    
+    <div class="notifications" id="notifications"></div>
+    
+    <main>
+        <div class="sidebar">
+            <form id="filterForm">
+                <label for="category">Категория</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="category1"> Категория 1</label>
+                    <label><input type="checkbox" id="category2"> Категория 2</label>
+                    <label><input type="checkbox" id="category3"> Категория 3</label>
+                    <label><input type="checkbox" id="category4"> Категория 4</label>
+                    <label><input type="checkbox" id="category5"> Категория 5</label>
+                </div>
+                <label for="price">Стоимость</label>
+                <input type="number" id="minPrice" placeholder="От">
+                <input type="number" id="maxPrice" placeholder="До">
+                <label for="discount">
+                    <input type="radio" id="discount" name="discount"> Товары со скидкой
+                </label>
+                <button type="submit">Применить</button>
+            </form>
+        </div>
+
+        <div class="catalog">
+            <h2>Каталог</h2>
+            <select id="sortSelect">
+                <option value="priceLow">самые дешевые цены</option>
+                <option value="ratingHigh">самые лучшие по рейтингу</option>
+                <option value="priceHigh">самые высокие цены</option>
+                <option value="ratingLow">самые худшие по рейтингу</option>
+            </select>
+
+            <div class="product-grid" id="productGrid">
+                
+            </div>
+            <button id="loadMore">Загрузить ещё</button>
+        </div>
+    </main>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>О компании</h3>
+            <p>Мы предлагаем широкий выбор товаров высокого качества по доступным ценам. Доставка по всей России.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Контакты</h3>
+            <ul>
+                <li>Телефон: <a href="tel:+78005553535">8 (800) 555-35-35</a></li>
+                <li>Email: <a href="mailto:info@shop.ru">info@shop.ru</a></li>
+                <li>Адрес: Москва, ул. Примерная, д. 1</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Мы в соцсетях</h3>
+            <div class="social-links">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/twitter.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Интернет-магазин. Все права защищены.</p>
+    </div>
+</footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
